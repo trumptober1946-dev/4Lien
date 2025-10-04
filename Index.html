@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4LIEN - A CZ Favorite on Binance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0B0E11;
+            color: #EAECEF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Banner */
+        .header-banner {
+            width: 100%;
+            background: linear-gradient(135deg, #0B0E11 0%, #1E2329 100%);
+            padding: 0;
+            margin: 0;
+        }
+
+        .header-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #1E2329 0%, #0B0E11 100%);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #F0B90B;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(240, 185, 11, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #EAECEF;
+            margin-bottom: 40px;
+        }
+
+        /* Token Info */
+        .token-info {
+            background: #1E2329;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 800px;
+            border: 2px solid #F0B90B;
+        }
+
+        .token-info h2 {
+            color: #F0B90B;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .contract-address {
+            background: #0B0E11;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+            margin: 20px 0;
+            border: 1px solid #F0B90B;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .contract-address:hover {
+            background: #2B3139;
+            transform: scale(1.02);
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background: #F0B90B;
+            color: #0B0E11;
+        }
+
+        .btn-primary:hover {
+            background: #FCD535;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(240, 185, 11, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #F0B90B;
+            border: 2px solid #F0B90B;
+        }
+
+        .btn-secondary:hover {
+            background: #F0B90B;
+            color: #0B0E11;
+            transform: translateY(-3px);
+        }
+
+        /* Gallery */
+        .gallery {
+            padding: 60px 20px;
+            background: #0B0E11;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #F0B90B;
+            margin-bottom: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #F0B90B;
+            transition: all 0.3s;
+            background: #1E2329;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(240, 185, 11, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Social Links */
+        .social {
+            text-align: center;
+            padding: 60px 20px;
+            background: #1E2329;
+        }
+
+        .social h2 {
+            font-size: 2.5rem;
+            color: #F0B90B;
+            margin-bottom: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            padding: 15px 35px;
+            background: #F0B90B;
+            color: #0B0E11;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background: #FCD535;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(240, 185, 11, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #0B0E11;
+            color: #848E9C;
+            border-top: 1px solid #2B3139;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Banner -->
+    <div class="header-banner">
+        <img src="https://lindy.nyc3.digitaloceanspaces.com/user-content/prod/owners/687b6b0c6a7da8ac6dba2187/attachments/43871295-abda-492d-af07-0b04860c0350-WhatsApp%20Image%202025-10-04%20at%205.36.42%20PM.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=DO00QNZAZRRRMG9PUNE4%2F20251004%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20251004T134843Z&X-Amz-Expires=86400&X-Amz-Signature=007c68b7f201ba329a97247ed5a92350065703c93a1bf408e3cc7ccd4831b1f8&X-Amz-SignedHeaders=host&x-id=GetObject" alt="4LIEN on Binance - A CZ Favorite">
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>4LIEN</h1>
+            <p>The Alien Token Taking Over Binance Smart Chain</p>
+        </div>
+    </section>
+
+    <!-- Token Info -->
+    <section class="container">
+        <div class="token-info">
+            <h2>Token Information</h2>
+            <p><strong>Token Name:</strong> 4LIEN</p>
+            <div class="contract-address" onclick="copyAddress()" title="Click to copy">
+                <strong>Contract Address:</strong><br>
+                0xe69f2aB8e28596978baB94Ec8c2203c777d64444
+            </div>
+            <p style="font-size: 0.9rem; color: #848E9C;">Click address to copy</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="button-group">
+            <a href="https://pancakeswap.finance/swap?outputCurrency=0xe69f2aB8e28596978baB94Ec8c2203c777d64444" target="_blank" class="btn btn-primary">
+                🥞 Buy on PancakeSwap
+            </a>
+            <a href="https://dexscreener.com/bsc/0xe69f2aB8e28596978baB94Ec8c2203c777d64444" target="_blank" class="btn btn-secondary">
+                📊 View Live Price
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <h2>4LIEN Memes</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://lindy.nyc3.digitaloceanspaces.com/user-content/prod/owners/687b6b0c6a7da8ac6dba2187/attachments/c2b0f5f6-8a9f-4ea8-ad88-2ba4538f7db6-WhatsApp%20Image%202025-10-04%20at%205.36.39%20PM.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=DO00QNZAZRRRMG9PUNE4%2F20251004%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20251004T134547Z&X-Amz-Expires=86400&X-Amz-Signature=4c3092ed684aad068edbde674aeaacedeeb47251f49490a044f681ac869692eb&X-Amz-SignedHeaders=host&x-id=GetObject" alt="4LIEN Meme 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lindy.nyc3.digitaloceanspaces.com/user-content/prod/owners/687b6b0c6a7da8ac6dba2187/attachments/387a836b-f8ae-4a11-9e1f-bac7967a0364-WhatsApp%20Image%202025-10-04%20at%205.36.42%20PM%20%281%29.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=DO00QNZAZRRRMG9PUNE4%2F20251004%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20251004T134554Z&X-Amz-Expires=86400&X-Amz-Signature=3765bb4038038cb4652f50a2c5c4b56199f4105ebc4a1df6e4391af4410ed537&X-Amz-SignedHeaders=host&x-id=GetObject" alt="4LIEN Meme 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lindy.nyc3.digitaloceanspaces.com/user-content/prod/owners/687b6b0c6a7da8ac6dba2187/attachments/612fe29c-d800-4d15-b752-6b0075f93ccb-WhatsApp%20Image%202025-10-04%20at%205.36.41%20PM%20%281%29.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=DO00QNZAZRRRMG9PUNE4%2F20251004%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20251004T134605Z&X-Amz-Expires=86400&X-Amz-Signature=3db9e6856f6653fe05e7de69a5de15d0d549b57b4a7e12db3f046caa304029ce&X-Amz-SignedHeaders=host&x-id=GetObject" alt="4LIEN Meme 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lindy.nyc3.digitaloceanspaces.com/user-content/prod/owners/687b6b0c6a7da8ac6dba2187/attachments/135c39e4-30e3-4c57-b0a2-9dc23e471894-WhatsApp%20Image%202025-10-04%20at%205.36.41%20PM.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=DO00QNZAZRRRMG9PUNE4%2F20251004%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20251004T134613Z&X-Amz-Expires=86400&X-Amz-Signature=640899584b7aa51410a500a6e6bcb18748d1f8ccbd1b5332d9a1f6af7811862c&X-Amz-SignedHeaders=host&x-id=GetObject" alt="4LIEN Meme 4">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lindy.nyc3.digitaloceanspaces.com/user-content/prod/owners/687b6b0c6a7da8ac6dba2187/attachments/323af049-1b30-44d3-88d2-85dbebd242bb-WhatsApp%20Image%202025-10-04%20at%205.36.40%20PM.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=DO00QNZAZRRRMG9PUNE4%2F20251004%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20251004T134631Z&X-Amz-Expires=86400&X-Amz-Signature=e61eb8945c8c8c62edbd2c4215f2bc3936ebe19e555efd49da586a7727f7b975&X-Amz-SignedHeaders=host&x-id=GetObject" alt="4LIEN Meme 5">
+            </div>
+            <div class="gallery-item">
+                <img src="https://lindy.nyc3.digitaloceanspaces.com/user-content/prod/owners/687b6b0c6a7da8ac6dba2187/attachments/b303ee89-02cd-4f02-8588-5436a0c2cece-WhatsApp%20Image%202025-10-04%20at%205.36.41%20PM%20%282%29.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=DO00QNZAZRRRMG9PUNE4%2F20251004%2Fnyc3%2Fs3%2Faws4_request&X-Amz-Date=20251004T134723Z&X-Amz-Expires=86400&X-Amz-Signature=227678675ee1c9497fd4e1d8f5fe7c4351ddec87df739080f27b3b5542c71946&X-Amz-SignedHeaders=host&x-id=GetObject" alt="CZ Tweet">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="social">
+        <h2>Join the Community</h2>
+        <div class="social-links">
+            <a href="https://x.com/i/communities/1974374425782071347" target="_blank" class="social-btn">
+                𝕏 X Community
+            </a>
+            <a href="https://t.me/BinanceAlien" target="_blank" class="social-btn">
+                📱 Telegram
+            </a>
+            <a href="https://x.com/cz_binance/status/1702786429577826466" target="_blank" class="social-btn">
+                🔗 CZ's Tweet
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 4LIEN Token. All rights reserved.</p>
+        <p>Built for the Binance Smart Chain community</p>
+    </footer>
+
+    <script>
+        function copyAddress() {
+            const address = '0xe69f2aB8e28596978baB94Ec8c2203c777d64444';
+            navigator.clipboard.writeText(address).then(() => {
+                alert('Contract address copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
+
